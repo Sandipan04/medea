@@ -20,3 +20,6 @@ for r in results:
 anime = animes[1]
 info = anime.get_info()
 print(info.name)
+
+episodes = anime.get_episodes(lang=LanguageTypeEnum.SUB)
+print(len(episodes))
