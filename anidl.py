@@ -1,11 +1,11 @@
-import discord
-from discord.ext import commands
-from discord import app_commands
+# import discord
+# from discord.ext import commands
+# from discord import app_commands
 from anipy_api.provider import list_providers, get_provider, LanguageTypeEnum
 from anipy_api.anime import Anime
-from pathlib import Path
+# from pathlib import Path
 from anipy_api.download import Downloader
-from wrapt_timeout_decorator import timeout
+# from wrapt_timeout_decorator import timeout
 import subprocess as sp
 from time import sleep
 

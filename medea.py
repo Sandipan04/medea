@@ -7,6 +7,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from time import sleep
+from dotenv import load_dotenv
 from bing_image_downloader import downloader
 from llm_chat import *
 
@@ -40,6 +41,7 @@ def get_chunks(s, maxlength):
 
 if __name__ == "__main__":
 
+    load_dotenv()
     # bot = commands.Bot(command_prefix=".", intents=discord.Intents.all())
     bot = Bot()
 
@@ -164,5 +166,5 @@ if __name__ == "__main__":
         else:
             await ctx.reply("This function is only available to the bot developer. Contact him for further details.")
 
-    token = "MTI0OTA3NjQzNzUxMjYxODAxNA.GZDMrM.uQdGpj2nexOoZDo74VNrYwoNchNMedQo5-B8Ro"
+    token = os.getenv('DISCORD_TOKEN')
     bot.run(token)
